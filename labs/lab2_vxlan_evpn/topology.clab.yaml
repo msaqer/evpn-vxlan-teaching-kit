@@ -1,0 +1,13 @@
+name: lab2-evpn-vxlan
+topology:
+  nodes:
+    leaf1: { kind: linux, image: frrouting/frr:latest }
+    leaf2: { kind: linux, image: frrouting/frr:latest }
+    spine:  { kind: linux, image: frrouting/frr:latest }
+    hostA:  { kind: linux, image: alpine:latest }
+    hostB:  { kind: linux, image: alpine:latest }
+  links:
+    - endpoints: ["leaf1:eth1","spine:eth1"]
+    - endpoints: ["leaf2:eth1","spine:eth2"]
+    - endpoints: ["leaf1:eth2","hostA:eth1"]
+    - endpoints: ["leaf2:eth2","hostB:eth1"]
