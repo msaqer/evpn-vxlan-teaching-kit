@@ -27,12 +27,20 @@ cd evpn-vxlan-teaching-kit
 ## Repo layout
 ```
 evpn-vxlan-teaching-kit/
++ labs/
++   lab1_underlay/
++   lab2_vxlan_evpn/
++ topologies/
++   basic.clab.yml
++ verify/
++   commands.md
+
   README.md                # quick start, glossary
   lab1_underlay_overlay/   # topology, tasks, verify cmds
   lab2_evpn_vxlan/         # topology, tasks, verify cmds
   topologies/              # 
   rubrics/                 # short grading checklists
-  LICENSE                  
+  LICENSE                  # MIT               
 ```
 
 ---
