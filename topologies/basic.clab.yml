@@ -1,0 +1,11 @@
+# Placeholder example — not yet runnable. Will be updated post-conference.
+name: basic
+topology:
+  nodes:
+    r1: { kind: linux, image: frrouting/frr:latest }
+    r2: { kind: linux, image: frrouting/frr:latest }
+    r3: { kind: linux, image: frrouting/frr:latest }
+  links:
+    - endpoints: ["r1:eth1","r2:eth1"]
+    - endpoints: ["r2:eth2","r3:eth1"]
+    - endpoints: ["r1:eth2","r3:eth2"]
