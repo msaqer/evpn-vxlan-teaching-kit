@@ -18,7 +18,7 @@ curl -sL https://get.containerlab.srlinux.dev | bash
 
 **Clone this kit (when hosted):**
 ```bash
-git clone <REPO_URL> evpn-vxlan-teaching-kit
+git clone https://github.com/msaqer/evpn-vxlan-teaching-kit
 cd evpn-vxlan-teaching-kit
 ```
 
@@ -30,9 +30,9 @@ evpn-vxlan-teaching-kit/
   README.md                # quick start, glossary
   lab1_underlay_overlay/   # topology, tasks, verify cmds
   lab2_evpn_vxlan/         # topology, tasks, verify cmds
-  assets/                  # diagrams, slide snippets
+  topologies/              # 
   rubrics/                 # short grading checklists
-  LICENSE                  # CC BY 4.0 (teaching use)
+  LICENSE                  
 ```
 
 ---
