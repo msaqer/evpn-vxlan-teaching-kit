@@ -21,7 +21,18 @@ curl -sL https://get.containerlab.srlinux.dev | bash
 git clone https://github.com/msaqer/evpn-vxlan-teaching-kit
 cd evpn-vxlan-teaching-kit
 ```
+---
+How to run (fastest path)
 
+Install containerlab (Linux): curl -sL https://get.containerlab.srlinux.dev | bash
+
+git clone https://github.com/msaqer/evpn-vxlan-teaching-kit && cd evpn-vxlan-teaching-kit
+
+Lab 1: sudo clab deploy -t labs/lab1_underlay/topology.clab.yaml
+
+Lab 2: sudo clab deploy -t labs/lab2_vxlan_evpn/topology.clab.yaml
+
+Clean up: sudo clab destroy -t <same-file>
 ---
 
 ## Repo layout
