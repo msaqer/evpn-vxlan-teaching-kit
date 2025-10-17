@@ -27,20 +27,14 @@ cd evpn-vxlan-teaching-kit
 ## Repo layout
 ```
 evpn-vxlan-teaching-kit/
-+ labs/
-+   lab1_underlay/
-+   lab2_vxlan_evpn/
-+ topologies/
-+   basic.clab.yml
-+ verify/
-+   commands.md
-
-  README.md                # quick start, glossary
-  lab1_underlay_overlay/   # topology, tasks, verify cmds
-  lab2_evpn_vxlan/         # topology, tasks, verify cmds
-  topologies/              # 
-  rubrics/                 # short grading checklists
-  LICENSE                  # MIT               
+  README.md                  # quick start, glossary
+  labs/
+    lab1_underlay/          # topology, tasks, verify cmds
+    lab2_vxlan_evpn/        # topology, tasks, verify cmds
+  topologies/               # standalone demo(s)
+  rubrics/                  # short grading checklists
+  verify/                   # common verify commands
+  LICENSE                   # MIT             
 ```
 
 ---
@@ -49,8 +43,11 @@ evpn-vxlan-teaching-kit/
 **Outcome.** Understand physical **underlay** vs. virtual **overlay**; trace packet paths.
 **Run (containerlab example):**
 ```bash
-sudo clab deploy -t lab1_underlay_overlay/topology.clab.yaml
+sudo clab deploy -t labs/lab1_underlay/topology.clab.yaml
 ```
+# when done
+sudo clab destroy -t <same-topology-file>
+
 **Verify:** `ip route`, `ping`, `traceroute`.  
 **Deliverable:** One-page worksheet (topology, commands, answers).
 
@@ -74,8 +71,11 @@ topology:
 **Outcome.** See how **VXLAN** tunnels Layer‑2 over IP and how **BGP EVPN** advertises MAC/IP reachability.
 **Run:**
 ```bash
-sudo clab deploy -t lab2_evpn_vxlan/topology.clab.yaml
+sudo clab deploy -t labs/lab2_vxlan_evpn/topology.clab.yaml
 ```
+# when done
+sudo clab destroy -t <same-topology-file>
+
 **Verify:**  
 - `vtysh -c "show evpn vni"`  
 - `vtysh -c "show evpn mac"`  
