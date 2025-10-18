@@ -207,6 +207,7 @@ make lab1-down    # tear down Lab 1
 make lab2-up      # bring up Lab 2
 make lab2-down    # tear down Lab 2
 make evpn-smoke   # quick verification for Lab 2 (BGP EVPN/VNIs/MACs)
+```
 
 ---
 
