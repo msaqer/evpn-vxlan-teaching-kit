@@ -21,6 +21,11 @@ curl -sL https://get.containerlab.srlinux.dev | bash
 git clone https://github.com/msaqer/evpn-vxlan-teaching-kit
 cd evpn-vxlan-teaching-kit
 ```
+**Clone this kit (when hosted):**
+
+```bash
+git clone https://github.com/msaqer/evpn-vxlan-teaching-kit
+cd evpn-vxlan-teaching-kit
 
 
 ## Repo layout
