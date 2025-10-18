@@ -66,7 +66,11 @@ sudo clab destroy -t <same-topology-file>
 
 ## Lab 1 — Underlay/Overlay Basics (90–120 min)
 
-**Outcome.** Understand physical **underlay** vs. virtual **overlay**; trace packet paths.
+**Outcome:** Understand physical **underlay** vs. virtual **overlay**; trace packet paths.
+- **Tasks:** build a 3-router IP underlay; verify reachability; add a simple overlay segment.
+- **Verify:** ip route, ping, traceroute.
+- **Deliverable:** one-page worksheet (topology, commands, answers).
+
 
 **Run (containerlab example):**
 ```bash
