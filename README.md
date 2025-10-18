@@ -255,11 +255,4 @@ evpn-vxlan-teaching-kit/
   LICENSE                   # MIT
 ```
 ---
-
-**Get the repo:**
-```bash
-git clone https://github.com/msaqer/evpn-vxlan-teaching-kit.git
-cd evpn-vxlan-teaching-kit
-```
----
 **License:** MIT
