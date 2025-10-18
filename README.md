@@ -3,7 +3,7 @@
 **Goal.** Make modern **datacenter** fabrics teachable to *early undergraduates* using free, reproducible emulation on ordinary campus PCs. This repo provides a minimal, vendor‑neutral starter design: **underlay vs. overlay basics**, **VXLAN** overlay, **BGP EVPN** control plane, and **essential operations** (visibility, failure domains, simple ECMP paths).
 
 
-**Purpose.** A small, vendor-neutral teaching kit for *early undergraduates* that runs on standard campus PCs. This starter will be co-developed with ND faculty/industry after the conference. It aligns with **K–20 STEM education** and **workforce development** as ND expands AI/data-center activity (e.g., CoreWeave capacity within Applied Digital sites at Ellendale and Harwood).
+**Purpose.** A small, vendor-neutral teaching kit for *early undergraduates* that runs on standard campus PCs. This starter will be co-developed with ND faculty/industry after the conference. It aligns with **K–20 STEM education** and **workforce development** as ND expands AI/datacenter activity (e.g., CoreWeave capacity within Applied Digital sites at Ellendale and Harwood).
 
 ---
 
@@ -12,14 +12,14 @@
 **Requirements (instructor machine or lab PCs):**
 - Linux **or** Windows 11 with **WSL2** (Windows Subsystem for Linux, https://learn.microsoft.com/en-us/windows/wsl/about) 
 - Docker/Podman (8–16 GB RAM recommended)  
-- **containerlab** (primary runtime for these labs): One of: [containerlab](https://containerlab.dev) **or** [GNS3](https://www.gns3.com)  
+- **containerlab** (primary runtime for these labs): One of: [containerlab](https://containerlab.dev) **or** [GNS3](https://www.gns3.com). **Note:** GNS3 project planned for v0.2
 - Images (pinned for reproducibility):  
   - `alpine:3.19` (hosts / simple routers)  
   - `frrouting/frr:v10.1` (FRR routers)
 
 **Install containerlab (Linux):**
 ```bash
-curl -sL https://get.containerlab.srlinux.dev | sudo bash
+curl -sL https://get.containerlab.srlinux.dev | **sudo** bash
 ```
 **Pre‑pull pinned images (faster workshops):**
 ```bash
@@ -34,7 +34,7 @@ docker pull frrouting/frr:v10.1
 
 ```bash
 # 1) install containerlab (Linux)
-curl -sL https://get.containerlab.srlinux.dev | bash
+curl -sL https://get.containerlab.srlinux.dev | **sudo** bash
 
 # 2) clone
 git clone https://github.com/msaqer/evpn-vxlan-teaching-kit
@@ -72,7 +72,7 @@ sudo systemctl enable --now docker
 sudo usermod -aG docker $USER
 
 # Install containerlab
-curl -sL https://get.containerlab.srlinux.dev | sudo bash
+curl -sL https://get.containerlab.srlinux.dev | **sudo** bash
 
 # (Close and reopen your WSL terminal to pick up docker group membership.)
 ```
