@@ -149,6 +149,7 @@ sudo clab deploy -t labs/lab2_vxlan_evpn/topology.clab.yaml
 ```
 
 **Destroy when done:**
+```bash
 sudo clab destroy -t labs/lab2_vxlan_evpn/topology.clab.yaml
 ```
 
