@@ -12,7 +12,7 @@
 **Requirements (instructor machine or lab PCs):**
 - Linux **or** Windows 11 with **WSL2** (Windows Subsystem for Linux, https://learn.microsoft.com/en-us/windows/wsl/about) 
 - Docker/Podman (8–16 GB RAM recommended)  
-- **containerlab** (primary runtime for these labs): One of: [containerlab](https://containerlab.dev) **or** [GNS3](https://www.gns3.com). **Note:** GNS3 project planned for v0.2
+- **containerlab** (primary runtime for these labs): One of: [containerlab](https://containerlab.dev) **or** [GNS3](https://www.gns3.com). **Note:** > GNS3 project: planned for v0.2. Containerlab is the reference runtime in v0.1.
 - Images (pinned for reproducibility):  
   - `alpine:3.19` (hosts / simple routers)  
   - `frrouting/frr:v10.1` (FRR routers)
@@ -68,13 +68,14 @@ wsl --install -d Ubuntu
 sudo apt update && sudo apt install -y curl ca-certificates git docker.io
 
 # Enable Docker in WSL
-sudo systemctl enable --now docker
+sudo systemctl enable --now docker || true
 sudo usermod -aG docker $USER
 
-# Install containerlab
+# Install containerlab (needs root)
 curl -sL https://get.containerlab.srlinux.dev | **sudo** bash
 
-# (Close and reopen your WSL terminal to pick up docker group membership.)
+# Close and reopen your WSL terminal so the docker group applies, then:
+docker ps   # should work without sudo
 ```
 
 > If `systemctl` is unavailable in your WSL image, you can launch dockerd manually or use Docker Desktop with the WSL2 backend enabled. Either works with containerlab.
@@ -194,6 +195,18 @@ clab exec -t labs/lab2_vxlan_evpn/topology.clab.yaml --cmd 'vtysh -c "show evpn 
 ```
 
 > **Instructor note:** configs can be templated; keep a single tenant/VNI for clarity.
+
+---
+## Optional Makefile helpers
+
+For quicker demos, the repo includes a small `Makefile` with convenience targets:
+
+```bash
+make lab1-up      # bring up Lab 1
+make lab1-down    # tear down Lab 1
+make lab2-up      # bring up Lab 2
+make lab2-down    # tear down Lab 2
+make evpn-smoke   # quick verification for Lab 2 (BGP EVPN/VNIs/MACs)
 
 ---
 
