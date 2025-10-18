@@ -35,19 +35,6 @@ evpn-vxlan-teaching-kit/
   LICENSE                   # MIT             
 ```
 
-## Repor layout
-```text
-evpn-vxlan-teaching-kit/
-  README.md                  # quick start, labs, glossary, collab menu
-  labs/
-    lab1_underlay/          # topology, tasks, verify cmds
-    lab2_vxlan_evpn/        # topology, tasks, verify cmds
-  topologies/               # standalone demos / extras
-  rubrics/                  # short grading checklists
-  verify/                   # common verify commands
-  LICENSE                   # MIT
-```
-
 ---
 ## How to run (fastest path)
 
@@ -67,7 +54,7 @@ evpn-vxlan-teaching-kit/
 sudo clab deploy -t labs/lab1_underlay/topology.clab.yaml
 ```
 # when done
-``sudo clab destroy -t <same-topology-file>``
+sudo clab destroy -t labs/lab1_underlay/topology.clab.yaml`
 
 **Verify:** `ip route`, `ping`, `traceroute`.  
 **Deliverable:** One-page worksheet (topology, commands, answers).
@@ -95,7 +82,7 @@ topology:
 sudo clab deploy -t labs/lab2_vxlan_evpn/topology.clab.yaml
 ```
 # when done
-sudo clab destroy -t <same-topology-file>
+sudo clab destroy -t labs/lab2_vxlan_evpn/topology.clab.yaml
 
 **Verify:**  
 - `vtysh -c "show evpn vni"`  
