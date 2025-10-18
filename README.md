@@ -197,7 +197,7 @@ clab exec -t labs/lab2_vxlan_evpn/topology.clab.yaml --cmd 'vtysh -c "show evpn 
 
 ---
 
-## Assessment rubrics (short form)
+## Assessment rubrics 
 
 - **Configuration correctness (40%)**  
 - **Troubleshooting & verification (40%)**  
