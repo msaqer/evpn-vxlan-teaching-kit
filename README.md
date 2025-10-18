@@ -42,7 +42,7 @@ evpn-vxlan-teaching-kit/
 2.  git clone https://github.com/msaqer/evpn-vxlan-teaching-kit && cd evpn-vxlan-teaching-kit
 3.  Lab 1: sudo clab deploy -t labs/lab1_underlay/topology.clab.yaml
 4.  Lab 2: sudo clab deploy -t labs/lab2_vxlan_evpn/topology.clab.yaml
-5.  `` `Clean up: sudo clab destroy -t <same-file>` ``
+5.  `` Clean up: sudo clab destroy -t <same-file> ``
 
 ---
 
@@ -54,7 +54,7 @@ evpn-vxlan-teaching-kit/
 sudo clab deploy -t labs/lab1_underlay/topology.clab.yaml
 ```
 # when done
-sudo clab destroy -t <same-topology-file>
+``sudo clab destroy -t <same-topology-file>``
 
 **Verify:** `ip route`, `ping`, `traceroute`.  
 **Deliverable:** One-page worksheet (topology, commands, answers).
