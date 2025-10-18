@@ -102,9 +102,10 @@ sudo clab deploy -t labs/lab1_underlay/topology.clab.yaml
 ```
 
 **Destroy (explicit path to avoid placeholder confusion) when done:**
+```bash
 sudo clab destroy -t labs/lab1_underlay/topology.clab.yaml
 ```
----
+
 
 **Verify:** `ip route`, `ping`, `traceroute`.  
 **Deliverable:** One-page worksheet (topology, commands, answers).
