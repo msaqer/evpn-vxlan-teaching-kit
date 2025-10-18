@@ -46,6 +46,7 @@ evpn-vxlan-teaching-kit/
   rubrics/                  # short grading checklists
   verify/                   # common verify commands
   LICENSE                   # MIT
+```
 
 ---
 ## How to run (fastest path)
