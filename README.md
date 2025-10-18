@@ -102,7 +102,11 @@ topology:
 
 ## Lab 2 — VXLAN + BGP EVPN (120–150 min)
 
-**Outcome.** See how **VXLAN** tunnels Layer-2 over IP and how **BGP EVPN** advertises MAC/IP reachability.
+**Outcome:** See how **VXLAN** tunnels Layer-2 over IP and how **BGP EVPN** advertises MAC/IP reachability.
+- **Tasks:** bring up FRRouting; configure VNI/VTEPs; enable EVPN; connect two tenants.
+- **Verify:** show evpn vni; show evpn mac; show bgp l2vpn evpn summary.
+- **Deliverable:** short checklist + screenshots of verification commands.
+
 
 **Run:**
 ```bash
